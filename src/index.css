@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type="range"] {
+    @apply h-2 rounded-lg appearance-none cursor-pointer bg-gray-700;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-blue-500 cursor-pointer hover:bg-blue-400 transition-colors;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply w-4 h-4 rounded-full bg-blue-500 cursor-pointer border-none hover:bg-blue-400 transition-colors;
+  }
+}
+
+.react-colorful {
+  @apply w-48 h-48;
+}
+
+.react-colorful__saturation {
+  @apply rounded-t-lg;
+}
+
+.react-colorful__hue {
+  @apply rounded-b-lg;
+}
+
+.react-colorful__saturation-pointer {
+  @apply w-4 h-4;
+}
+
+.react-colorful__hue-pointer {
+  @apply w-4 h-4;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* React Crop Styles */
+.ReactCrop {
+  @apply max-h-full max-w-full;
+}
+
+.ReactCrop__crop-selection {
+  @apply border-2 border-blue-500;
+}
+
+.ReactCrop__drag-handle {
+  @apply bg-blue-500;
+}
+
+.ReactCrop__drag-handle::after {
+  @apply bg-blue-500;
+}
